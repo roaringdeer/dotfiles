@@ -27,7 +27,8 @@ alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
-
+# print directory tree recursively
+alias dirtree='find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" '
 # =====
 # FUNCTIONS
 
